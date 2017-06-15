@@ -1,0 +1,23 @@
+<div app-header page-name="注册个人账户" show-back="true"></div>
+<div class="registerPersonal">
+	<div class="registerPInfo">
+		<div>
+			<label><img src="../image/account.png"></label>
+			<input type="text" placeholder="请输出用户名" ng-model="username">
+		</div>
+		<span class="carve"></span>
+		<div>
+			<label><img src="../image/lock.png"></label>
+			<input type="text" placeholder="请输出密码" ng-model="password">
+		</div>
+		<div class="code">
+			<input type="text" placeholder="短信验证码" ng-model="codeInput">
+			<button ng-click="getCode()">发送短信</button>
+		</div>
+	</div>
+
+	<button ng-click="registerPersonal()">
+		注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册
+	</button>
+	<button ui-sref="login">已有帐号，去登录...</button>
+</div>

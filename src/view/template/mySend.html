@@ -1,0 +1,15 @@
+<div app-header show-back="true" page-name="投递记录"></div>
+<div class="mySendList">
+	<div ng-repeat="item in mySendList">
+		<div ui-sref="position({id:item.id})">
+			<img ng-src="../image/{{item.imgurl}}">
+			<div class="info1"><b>{{item.companyname}}</b></div>
+			<div class="info2">
+				<div>{{item.industry}} [{{item.cityname}}]</div>
+				<span>{{item.salary | salary}}</span>
+			</div>
+			<div class="info3">{{item.publishtime}}</div>
+		</div>
+	</div>
+</div>
+<div app-footer></div>

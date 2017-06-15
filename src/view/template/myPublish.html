@@ -1,0 +1,33 @@
+<div app-header show-back="true" page-name="发布职位"></div>
+
+<div class="myPublish">
+	<div>
+		<label>公司名称：</label>
+		<input type="text" placeholder="请输入公司名称" ng-model="company">
+	</div>
+	<div>
+		<label>所在城市：</label>
+		<select ng-model="city" ng-options="value.name as value.name for value in cityList"></select>
+		<!-- <input type="text" placeholder="请输入城市名称" ng-model="city"> -->
+	</div>
+	<div>
+		<label>公司规模：</label>
+		<select ng-model="empnum" ng-options="value.name as value.name for value in empnumList"></select>
+		<!-- <input type="text" placeholder="请输入员工人数" ng-model="empnum"> -->
+	</div>
+	<div>
+		<label>招聘职位：</label>
+		<input type="text" placeholder="请输入招聘职位" ng-model="position">
+	</div>
+	<div class="salary">
+		<label>薪资范围：</label>
+		<select ng-model="salary" ng-options="value.name as value.name for value in salaryList"></select>
+		<!-- <input type="text" placeholder="最低薪资" ng-model="salaryMin">
+		<span class="carve">~</span>
+		<input type="text" placeholder="最高薪资" ng-model="salaryMax"> -->
+	</div>
+
+	<button class="publish" ng-click="publish()">发&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;布</button>
+</div>
+
+<div app-footer></div>

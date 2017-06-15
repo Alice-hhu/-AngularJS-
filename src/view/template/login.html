@@ -1,0 +1,23 @@
+<div app-header page-name="登录账户" show-back="true"></div>
+<div class="login">
+	<div class="loginInfo">
+		<div>
+			<label><img src="../image/account.png"></label>
+			<input type="text" placeholder="请输出用户名" ng-model="username">
+		</div>
+		<span class="carve"></span>
+		<div>
+			<label><img src="../image/lock.png"></label>
+			<input type="text" placeholder="请输出密码" ng-model="password">
+		</div>
+	</div>
+	<div class="loginBtn">
+		<button ng-click="loginPersonal()">个人登录</button>
+		<button ng-click="loginCompany()">企业登录</button>
+	</div>
+	<div class="registerBtn">
+		<div class="goRegister">还没有账号？去注册...</div>
+		<button ui-sref="registerPersonal">个人注册</button>
+		<button ui-sref="registerCompany">企业注册</button>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+
+<div class="positionDetail">
+	<div class="position">{{postion}}
+		<img src="../image/star.png" ng-if="!saveFlag" ng-click="saveResume()">
+		<img src="../image/star-active.png" ng-if="saveFlag" ng-click="removeSave()">
+	</div>
+	<div class="positionInfo">
+		<div class="salary">薪资： {{salaryNow}}</div>
+		<div class="city">城市： {{city}}</div>
+		<div class="publishtime">发布时间： {{publishtime}}</div>
+	</div>
+	<div class="company">
+		<img src="../image/{{img}}">
+		<div>{{company}}</div>
+		<div class="empnum">员工数： {{empnum}}</div>
+	</div>
+
+	<button class="sendResume" ng-click="sendResume()">{{btnName}}</button>
+</div>

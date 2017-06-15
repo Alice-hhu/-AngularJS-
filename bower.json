@@ -1,0 +1,28 @@
+{
+  "name": "webApp",
+  "authors": [
+    "zbwroom <zbwroom@163.com>"
+  ],
+  "description": "angularjs webapp",
+  "main": "",
+  "keywords": [
+    "angularjs"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "^1.6.3",
+    "angular-ui-router": "ui-router#^0.4.2",
+    "angular-validation": "^1.4.3"
+  },
+  "dependencies": {
+    "angular-cookies": "^1.6.3"
+  }
+}

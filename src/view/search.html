@@ -1,0 +1,26 @@
+<div app-header page-name="定向搜索"></div>
+<div app-searchbar select-items="selectItems" show-select="showSelect(id)"></div>
+
+<div class="selectNow">
+	<select ng-model="selectValue1" ng-options="value.id as value.name for value in select1" ng-change="selectOption1()" id="citySelect"></select>
+	<select ng-model="selectValue2" ng-options="value.id as value.name for value in select2" ng-change="selectOption2()" id="salarySelect"></select>
+	<select ng-model="selectValue3" ng-options="value.id as value.name for value in select3" ng-change="selectOption3()" id="empnumSelect"></select>
+</div>
+<!-- <div class="positionList">
+	<div ng-repeat="item in positionList | positionFilter : selectValue1 : selectValue2 : selectValue3">
+		<div ui-sref="position({id:item.id})">
+			<img ng-src="../image/{{item.imgurl}}">
+			<div class="info1"><b>{{item.companyname}}</b></div>
+			<div class="info2">
+				<div>{{item.industry}} [{{item.cityname}}]</div>
+				<span>{{item.salary | salary}}</span>
+			</div>
+			<div class="info3">{{item.publishtime}}</div>
+		</div>
+	</div>
+</div> -->
+<div class="positionSearch">
+	<div app-position-list data='positionList' salary='salary' position-filter="positionFilter" select-one="selectCity" select-two="selectSalary" select-three="selectEmpnum"></div>
+</div>
+
+<div app-footer></div>

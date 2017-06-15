@@ -1,0 +1,9 @@
+
+<div class="userInfo" ng-if="!showFlag">
+	<div>欢迎你，{{userNow}}{{userCNow}}!</div>
+	<div class="myOption" ui-sref="mySend" ng-if="userLogin">投&nbsp;&nbsp;&nbsp;递</div>
+	<div class="myOption" ui-sref="mySave" ng-if="userLogin">收&nbsp;&nbsp;&nbsp;藏</div>
+	<div class="myOption" ui-sref="myPublish" ng-if="!userLogin">发布职位</div>
+	<div class="myOption" ui-sref="myResumes" ng-if="!userLogin">简历信息</div>
+	<button class="goLogin" ng-click="exit()">退出登录</button>
+</div>

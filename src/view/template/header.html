@@ -1,0 +1,11 @@
+<div class="header">
+	<!-- 在指令中使用link函数 定义back方法，跳转回之前一个页面 -->
+	<span ng-click='back()' ng-if="showBack">&lt;&lt;返回</span>
+	<span class="logo">{{pageName}}</span>
+	<span class="goLoginT" ui-sref="login" ng-if="showGoLoginT">去登录</span>
+	<!-- <div class="searchTop" ng-if="showSearch">
+		<button>取消</button>
+		<input type="text" placeholder="搜索职位／公司／城市">
+		<button><img ng-src="../image/search.png">搜索</button>
+	</div> -->
+</div>

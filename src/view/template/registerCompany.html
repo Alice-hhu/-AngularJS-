@@ -1,0 +1,34 @@
+<div app-header page-name="注册企业账户" show-back="true"></div>
+<div class="registerCompany">
+	<div class="registerCInfo">
+		<div>
+			<label><img src="../image/account.png"></label>
+			<input type="text" placeholder="请输出用户名" ng-model="username">
+		</div>
+		<span class="carve"></span>
+		<div>
+			<label><img src="../image/lock.png"></label>
+			<input type="text" placeholder="请输出密码" ng-model="password">
+		</div>
+		<span class="carve"></span>
+		<div>
+			<label>C</label>
+			<input type="text" placeholder="请输出企业名称" ng-model="company">
+		</div>
+		<span class="carve"></span>
+		<div>
+			<label>E</label>
+			<input type="text" placeholder="请输出员工数" ng-model="empnum">
+		</div>
+
+		<div class="code">
+			<input type="text" placeholder="短信验证码" ng-model="codeInput">
+			<button ng-click="getCodeC()">发送短信</button>
+		</div>
+	</div>
+
+	<button ng-click="registerCompany()">
+		注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册
+	</button>
+	<button ui-sref="login">已有帐号，去登录...</button>
+</div>

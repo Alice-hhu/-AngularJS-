@@ -1,0 +1,22 @@
+<div app-header show-back="true" page-name="我的收藏"></div>
+
+<div class="mySaveList">
+	<div ng-repeat="item in mySaveList">
+		<div ui-sref="position({id:item.id})" class="listInfo">
+
+			<img ng-src="../image/{{item.imgurl}}" >
+			<div class="info1">
+				<b>{{item.companyname}}</b>
+			</div>
+			<div class="info2">
+				<div>{{item.industry}} [{{item.cityname}}]</div>
+				<span>{{item.salary | salary}}</span>
+			</div>
+			<div class="info3">{{item.publishtime}}</div>
+		</div>
+
+		<!-- <img src="../image/star-active.png" ng-click="removeSave(item.id)" class="saveIcon"> -->
+	</div>
+</div>
+
+<div app-footer></div>

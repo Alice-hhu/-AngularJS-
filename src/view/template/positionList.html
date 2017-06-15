@@ -1,0 +1,14 @@
+
+<div class="positionList">
+	<div ng-repeat="item in data | positionFilter : selectOne : selectTwo : selectThree">
+		<div ui-sref="position({id:item.id})">
+			<img ng-src="../image/{{item.imgurl}}">
+			<div class="info1"><b>{{item.companyname}}</b></div>
+			<div class="info2">
+				<div>{{item.industry}} [{{item.cityname}}]</div>
+				<span>{{item.salary | salary}}</span>
+			</div>
+			<div class="info3">{{item.publishtime}}</div>
+		</div>
+	</div>
+</div>

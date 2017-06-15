@@ -1,0 +1,27 @@
+<div app-header show-back="true" page-name="简历信息"></div>
+
+<div class="myResumes">
+	<div class="chooseResume">
+		<div ng-click="statusChoose=new">未处理</div>
+		<div ng-click="statusChoose=passed">已通过</div>
+		<div ng-click="statusChoose=denied">已拒绝</div>
+	</div>
+	<!-- <div ng-repeat="item in myResumes | resumeStatus : statusChoose" class="resumeList"> -->
+	<div ng-repeat="item in myResumes" class="resumeList">
+		<div class="info">
+			<div class="info1">
+				<b>{{item.industry}}</b>
+				<span class="salary">{{item.salary | salary}}</span>
+			</div>
+			<div class="info2">{{item.company}} [{{item.city}}]</div>
+			<div class="info3">投递人：<b>{{item.username}}</b></div>
+		</div>
+		
+		<div class="option">
+			<button ng-click="approve(item.amount,'passed')" class="pass">通过</button>
+			<button ng-click="approve(item.amount,'denied')" class="reject">拒绝</button>
+		</div>
+	</div>
+</div>
+
+<div app-footer></div>
